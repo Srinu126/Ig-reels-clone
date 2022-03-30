@@ -1,23 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import Logo from './images/logo.jpg'
+import Avatar from './images/Avatar.jpg'
+import VideoCard from './components/VideoCard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className='app__top'>
+        <img className='app__logo' src={Logo} alt='Logo' />
+        <h1>Reels</h1>
+        {/* image at the top-logo */}
+        {/* Reels text */}
+      </div>
+      <div className='app__videos'>
+        <VideoCard channel='srinu_r'
+          avatarSrc={Avatar}
+          song='Test Song - sassaassanga'
+          likes={900}
+          shares={350} />
+        <VideoCard channel='srinu_r'
+          avatarSrc={Avatar}
+          song='Test Song - sassaassanga'
+          likes={900}
+          shares={350} />
+        <VideoCard
+          channel='srinu_r'
+          avatarSrc={Avatar}
+          song='Test Song - sassaassanga'
+          likes={900}
+          shares={350}
+        />
+        {/* container of app videos(Scrollable container) */}
+        {/* <Video/> */}
+        {/* <Video/> */}
+      </div>
     </div>
   );
 }
